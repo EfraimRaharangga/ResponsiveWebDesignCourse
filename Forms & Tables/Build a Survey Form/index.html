@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Hidangan</h1>
+    <p id="description">
+      Merupakan form survey makanan dan minuman yang akan digunakan keperluan
+      pendidikan
+    </p>
+    <form action="" id="survey-form">
+      <fieldset>
+        <legend>Data Diri</legend>
+        <label id="name-label" for="name">Nama</label>
+        <input
+          required
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Masukan Nama Anda"
+        />
+        <label id="email-label" for="email">Email</label>
+        <input
+          required
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Masukan Email Anda"
+        />
+        <label id="number-label" for="number">Umur</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          min="19"
+          max="75"
+          placeholder="Masukan Umur Anda"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Hidangan Pilihan</legend>
+        <label for="dropdown">Apa makanan favorit anda</label>
+        <select name="dropdown" id="dropdown">
+          <option value="nasi-padang">Nasi Padang</option>
+          <option value="bakso">Bakso</option>
+          <option value="soto">Soto</option>
+          <option value="gado-gado">Gado Gado</option>
+          <option value="tahu-campur">Tahu Camput</option>
+        </select>
+        <label for="dropdown2">Apa minuman favorit anda</label>
+        <select name="dropdown2" id="dropdown2">
+          <option value="es-teh">Es Teh</option>
+          <option value="es-jeruk">Es Jeruk</option>
+          <option value="ronde">Ronde</option>
+          <option value="jahe">Jahe</option>
+          <option value="susu">Susu</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Apakah anda sudah pernah mengisi survey serupa sebelumnya
+        </legend>
+        <input type="radio" name="serupa" id="yes" value="serupa" />
+        <label for="yes">Sudah</label>
+        <input type="radio" name="serupa" id="no" value="serupa" />
+        <label for="no">Belum</label>
+      </fieldset>
+      <fieldset>
+        <legend>Darimana anda mengetahui tentang survey ini ?</legend>
+        <input type="checkbox" value="teman" name="teman" id="teman" />
+        <label for="teman">Teman</label>
+        <input
+          type="checkbox"
+          value="instagram"
+          name="instagram"
+          id="instagram"
+        />
+        <label for="instagram">Instagram</label>
+        <input type="checkbox" value="facebook" id="facebook" name="facebook" />
+        <label for="facebook">Facebook</label>
+        <input type="checkbox" value="whatsapp" id="whatsapp" name="whatsapp" />
+        <label for="whatsapp">Whatsapp</label>
+      </fieldset>
+      <label for="komentar">Berikan kesan anda tentang survey ini</label>
+      <textarea name="komentar" id="komentar"></textarea>
+      <button type="submit" id="submit"></button>
+    </form>
+  </body>
+</html>
