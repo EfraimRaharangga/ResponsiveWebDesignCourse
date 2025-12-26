@@ -1,0 +1,40 @@
+.card {
+  width: 70%;
+  width: 500px;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 5px 15px;
+  background-color: rgb(236, 80, 112);
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.todo-list > li {
+  margin-bottom: 15px;
+  list-style: none;
+  background-color: rgb(252, 170, 111);
+  border-radius: 10px;
+  padding: 5px;
+}
+a {
+  text-decoration: none;
+}
+
+.sub-item-link {
+  color: rgb(124, 17, 17);
+}
+
+.sub-item-link:hover {
+  color: black;
+}
+.sub-item-link:active {
+  color: green;
+}
+.sub-item-link:focus {
+  border: 1px solid purple;
+}
+.sub-item-link:visited {
+  color: oldlace;
+}
