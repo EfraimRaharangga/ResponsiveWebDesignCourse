@@ -70,7 +70,7 @@ The Responsive Web Design course includes the following learning materials:
 │       │   └── index.html
 │       ├── build-a-multimedia-player/
 │       │   └── index.html
-│       ├── build-an-event-hub/
+│       ├── -event-hub/
 │       │   └── index.html
 │       └── design-a-movie-review-page/
 │           └── index.html

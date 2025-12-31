@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Job Application Form</h1>
+
+      <form>
+        <!-- Full Name -->
+        <div>
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john@email.com"
+            required
+          />
+        </div>
+
+        <!-- Position -->
+        <div>
+          <label for="position">Job Position</label>
+          <select id="position" name="position" required>
+            <option value="" disabled selected>Select a position</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="uiux">UI/UX Designer</option>
+            <option value="data">Data Analyst</option>
+          </select>
+        </div>
+
+        <!-- Radio Group -->
+        <fieldset class="radio-group">
+          <legend>Availability</legend>
+
+          <div class="radio-option">
+            <input
+              type="radio"
+              id="fulltime"
+              name="availability"
+              value="full-time"
+              required
+            />
+            <label for="fulltime">Full-Time</label>
+          </div>
+
+          <div class="radio-option">
+            <input
+              type="radio"
+              id="parttime"
+              name="availability"
+              value="part-time"
+            />
+            <label for="parttime">Part-Time</label>
+          </div>
+        </fieldset>
+
+        <!-- Message -->
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message..."
+            required
+            minlength="10"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </body>
+</html>
