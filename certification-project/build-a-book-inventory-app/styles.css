@@ -1,0 +1,93 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+table {
+  margin: 1rem auto;
+}
+
+span {
+  display: inline-block;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 3px 1rem;
+}
+
+th {
+  background-image: linear-gradient(white, aquamarine);
+}
+
+/* 
+
+set background to table row
+
+*/
+tr[class="read"] {
+  background-image: linear-gradient(white, rgb(3, 218, 3));
+}
+tr[class="to-read"] {
+  background-image: linear-gradient(white, gray);
+}
+tr[class="in-progress"] {
+  background-image: linear-gradient(white, gold);
+}
+
+/* 
+
+set status  
+
+*/
+
+span[class="status"],
+span[class^="rate"] {
+  width: 7rem;
+  text-align: center;
+  height: fit-content;
+  padding: 3px 0;
+  border-radius: 1rem;
+}
+tr[class="read"] span[class="status"] {
+  border: none;
+  background-image: linear-gradient(rgb(3, 218, 3), green);
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: none;
+  background-image: linear-gradient(rgb(201, 200, 200), gray);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: none;
+  background-image: linear-gradient(gold, rgb(165, 141, 4));
+}
+
+/* 
+
+Set Rate 
+
+*/
+
+span[class^="rate"] > span {
+  border: rgb(82, 77, 77) solid 1px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(gold, goldenrod);
+}
+
+span[class~="two"] span:nth-child(-n + 2) {
+  background-image: linear-gradient(gold, goldenrod);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(gold, goldenrod);
+}
