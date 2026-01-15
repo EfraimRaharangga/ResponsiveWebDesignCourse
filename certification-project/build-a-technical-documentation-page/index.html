@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>PHP Documentation</header>
+      <div class="link">
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Requirement" class="nav-link">Requirement</a>
+        <a href="#Basic_Syntax" class="nav-link">Basic Syntax</a>
+        <a href="#PHP_Lifecycle" class="nav-link">PHP Lifecycle</a>
+        <a href="#Variables_and_Data_Types" class="nav-link"
+          >Variables and Data Types</a
+        >
+        <a href="#Constants" class="nav-link">Constants</a>
+        <a href="#Conditional_Logic" class="nav-link">Conditional Logic</a>
+        <a href="#Loops" class="nav-link">Loops</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>
+          PHP (Hypertext Preprocessor) is a widely-used, open-source server-side
+          scripting language designed specifically for web development. Unlike
+          client-side languages like HTML or JavaScript, PHP code is executed on
+          the server, generating HTML which is then sent to the client's
+          browser. Here's the key features of PHP
+        </p>
+        <ul>
+          <li>
+            Server-Side: Runs on the server, keeping your source code hidden
+            from users.
+          </li>
+          <li>
+            Database Integration: Seamlessly connects with MySQL, PostgreSQL,
+            Oracle, and more.
+          </li>
+          <li>
+            Large Ecosystem: Powers platforms like WordPress, Wikipedia, and
+            Laravel.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Requirement">
+        <header>Requirement</header>
+        <p>
+          Before you can run PHP, you need an environment that can process it.
+          and here's what you need:
+        </p>
+        <ul>
+          <li>Web Server: Apache or Nginx are the most common choices.</li>
+          <li>PHP Engine: The latest stable version (currently PHP 8.x).</li>
+          <li>Database: MySQL or MariaDB is the standard pairing.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Basic_Syntax">
+        <header>Basic Syntax</header>
+        <p>
+          Every PHP script begins and ends with specific tags. This tells the
+          server to start interpreting the code as PHP. Here's the example of
+          simple php's code
+        </p>
+        <code>
+          &lt;? <br />
+          php echo "Hello, World!";<br />
+          ?&gt;
+        </code>
+        <p>Key Rules</p>
+        <ul>
+          <li>Each statement must end with a semicolon (;).</li>
+          <li>Variables start with a dollar sign ($), such as $myVariable.</li>
+          <li>
+            PHP is case-sensitive for variables but not for built-in functions
+            (though it's best practice to be consistent).
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="PHP_Lifecycle">
+        <header>PHP Lifecycle</header>
+        <p>
+          Understanding how a PHP script executes is fundamental to debugging
+          and optimization. When a request hits the server, the PHP interpreter
+          starts at the top of the file and moves downward. It ignores anything
+          outside of the <span class="code"> &lt;?php ... ?&gt; </span>
+          tags, passing it directly to the output. This allows you to mix PHP
+          logic with HTML seamlessly.
+        </p>
+        <p>
+          This "stateless" nature is a core concept. Every time a page is
+          refreshed, the script starts from scratch. It doesn't "remember" what
+          happened in the previous request unless you specifically use sessions,
+          cookies, or a database to persist data.
+        </p>
+        <p>Basic Syntax Example</p>
+        <code>
+          &lt;?php <br />
+          // This is a PHP comment <br />
+          $greeting = "Welcome to my site"; <br />
+          echo "&lt;h1 &gt;" . $greeting . "&lt;/h1 &gt;"; <br />
+          ?&gt;
+        </code>
+      </section>
+      <section class="main-section" id="Variables_and_Data_Types">
+        <header>Variables and Data Types</header>
+        <p>
+          Variables in PHP are the primary way we store and manipulate data.
+          Every variable starts with a dollar sign ($), followed by a name. One
+          of PHP's most flexible features is that it is "loosely typed." This
+          means you don't have to explicitly tell PHP that a variable will hold
+          a string or a number; the engine determines the type automatically.
+        </p>
+        <p>Primary Data Types:</p>
+        <ul>
+          <li>String: Textual data like "Hello World".</li>
+          <li>Integer: Whole numbers like</li>
+          <li>100. Float: Decimal numbers like 10.5.</li>
+          <li>Boolean: Conditional values, either true or false.</li>
+          <li>Null: A variable with no value assigned.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <p>
+          While variables are designed to change, constants are used for values
+          that should remain the same throughout the entire execution of your
+          script. You define them using the define() function or the const
+          keyword. Common uses include storing database credentials or site-wide
+          configuration settings. Once defined, they cannot be changed or
+          "unset."
+        </p>
+        <p>
+          Predefined "Magic" Constants: PHP provides special constants that
+          change based on where they are used:
+        </p>
+        <ul>
+          <li>
+            <span class="code">__LINE__</span>: The current line number in the
+            file.
+          </li>
+          <li>
+            <span class="code">__FILE__</span>: The full path and filename of
+            the file.
+          </li>
+          <li>
+            <span class="code"> __DIR__</span>: The directory of the file.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Conditional_Logic">
+        <header>Conditional Logic</header>
+        <p>
+          Conditional statements are the "brain" of your application. They allow
+          your code to take different paths based on specific criteria. The
+          if...else structure is the most common, checking if a condition is
+          true before executing code.
+        </p>
+        <p>Common Structures</p>
+        <ul>
+          <li>If/Else: Standard binary decision making.</li>
+          <li>
+            Switch: Efficient for comparing one variable against many values.
+          </li>
+          <li>
+            Match (PHP 8+): A modern, more concise version of switch that
+            returns a value.
+          </li>
+        </ul>
+        <code>
+          $status = 200; $message = match($status) { <br />
+          200 => "Success",<br />
+          404 => "Not Found",<br />
+          default => "Unknown Error",<br />
+          };
+        </code>
+      </section>
+      <section class="main-section" id="Loops">
+        <header>Loops</header>
+        <p>
+          Loops execute the same block of code repeatedly until a condition is
+          met. This is essential for tasks like displaying products or reading
+          lines from a file.
+        </p>
+        <ul>
+          <li>For Loop: Used when you know the exact number of iterations.</li>
+          <li>While Loop: Runs as long as a certain condition remains true.</li>
+          <li>
+            Foreach Loop: Specifically designed to walk through every item in an
+            array without needing a counter.
+          </li>
+        </ul>
+        <code>
+          $colors = ["Red", "Green", "Blue"];<br />
+          foreach ($colors as $value) {<br />
+          echo "Color: $value &lt;br&gt;";<br />
+          }
+        </code>
+      </section>
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>
+          A function is a reusable block of code. Instead of writing the same
+          logic ten times, you wrap it in a function and "call" it whenever
+          needed. This follows the DRY (Don't Repeat Yourself) principle. In
+          modern PHP, you can also use "Type Hinting" to ensure functions
+          receive the correct data types.
+        </p>
+        <p>Defining a Functions :</p>
+        <code>
+          function calculateTotal(int $price, int $tax): int {<br />
+          return $price + $tax; <br />
+          } <br />
+          echo calculateTotal(100, 10); // Outputs 110
+        </code>
+      </section>
+    </main>
+  </body>
+</html>

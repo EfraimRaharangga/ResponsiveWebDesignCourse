@@ -1,0 +1,99 @@
+/* 
+
+general 
+
+*/
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* 
+
+navbar section  
+
+*/
+
+#navbar header {
+  text-align: center;
+}
+
+.link {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  overflow: scroll;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.link a {
+  font-size: 1.2rem;
+  border-bottom: 1px solid gray;
+  text-decoration: none;
+  color: rgb(87, 86, 86);
+  padding: 0.5rem 1.5rem;
+}
+
+.link a:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+/* 
+
+main doc section 
+
+*/
+
+#main-doc {
+  padding: 1rem;
+}
+
+#main-doc p {
+  text-align: justify;
+}
+
+#main-doc code {
+  display: block;
+  padding: 1rem 1.2rem;
+  border-radius: 4px;
+  background-color: #f1f5f9;
+}
+
+#main-doc section *:not(header) {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    display: flex;
+  }
+  #navbar {
+    width: 30%;
+    padding: 0.5rem;
+    height: 100vh;
+    border-right: 0.25rem solid gray;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+  }
+  #main-doc {
+    margin-top: 2rem;
+    width: 70%;
+  }
+
+  #navbar header {
+    margin-top: 1rem;
+  }
+  .link {
+    height: auto;
+    overflow: auto;
+  }
+}
