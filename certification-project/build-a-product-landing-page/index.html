@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HydraLoop</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&wght@300..700&GRAD@-25..200&opsz@20..48"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <img
+        src="assets/logo.png"
+        alt="HydraLoop logo"
+        id="header-img"
+        loading="lazy"
+      />
+
+      <nav id="nav-bar" aria-label="Primary navigation">
+        <a href="#feature" class="nav-link">Features</a>
+        <a href="#video-link" class="nav-link">Product Walkthrough</a>
+        <a href="#color" class="nav-link">Colorways</a>
+      </nav>
+    </header>
+
+    <div class="hero" id="top">
+      <div class="hero__content">
+        <p class="eyebrow">HydraLoop Daily Tumbler • 750ml</p>
+        <h1>Stay hydrated anywhere — without leaks, sweat, or compromises.</h1>
+        <p class="subhead">
+          A minimal, premium tumbler that keeps drinks cold for up to 24 hours
+          and hot for up to 12 — designed for work, campus, and the gym.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" href="#color">Choose a Color</a>
+          <a class="btn btn--ghost" href="#feature">See Features</a>
+        </div>
+
+        <div class="hero__trust">
+          <span class="pill">
+            <span class="material-symbols-rounded" aria-hidden="true"
+              >verified</span
+            >
+            Leak-proof lid
+          </span>
+          <span class="pill">
+            <span class="material-symbols-rounded" aria-hidden="true"
+              >ac_unit</span
+            >
+            24h cold
+          </span>
+          <span class="pill">
+            <span class="material-symbols-rounded" aria-hidden="true"
+              >local_fire_department</span
+            >
+            12h hot
+          </span>
+        </div>
+
+        <form
+          action="https://www.freecodecamp.org/email-submit"
+          class="email"
+          id="form"
+        >
+          <label for="email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Get early access offers — enter your email"
+            required
+          />
+          <input
+            type="submit"
+            id="submit"
+            value="Notify me"
+            class="btn btn--small"
+          />
+        </form>
+        <p class="fineprint">
+          No spam. Just product updates and occasional discounts.
+        </p>
+      </div>
+
+      <img
+        src="assets/product.png"
+        alt="HydraLoop tumblers in four colors"
+        class="hero__img"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="feature" id="feature">
+      <div class="section-head">
+        <h2>Built for daily use</h2>
+        <p>
+          Clean design meets real performance — the features you actually care
+          about.
+        </p>
+      </div>
+
+      <div class="feature__grid">
+        <article class="feature__card">
+          <div class="icon">
+            <span class="material-symbols-rounded" aria-hidden="true"
+              >water_drop</span
+            >
+          </div>
+          <h3>Leak-proof, bag-safe</h3>
+          <p>
+            A tight seal and flip-top lid keeps your tumbler secure — no spills
+            in your backpack.
+          </p>
+        </article>
+
+        <article class="feature__card">
+          <div class="icon">
+            <span class="material-symbols-rounded" aria-hidden="true"
+              >thermostat</span
+            >
+          </div>
+          <h3>All-day temperature hold</h3>
+          <p>
+            Double-wall vacuum insulation keeps drinks cold up to 24 hours and
+            hot up to 12 hours.
+          </p>
+        </article>
+
+        <article class="feature__card">
+          <div class="icon">
+            <span class="material-symbols-rounded" aria-hidden="true">eco</span>
+          </div>
+          <h3>304 stainless, BPA-free</h3>
+          <p>
+            Food-grade stainless steel with a BPA-free lid — durable, safe, and
+            easy to clean.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="video" id="video-link" aria-label="Product video section">
+      <div class="section-head">
+        <h2>See it in action</h2>
+        <p>
+          A quick walkthrough of how HydraLoop fits into your day — from desk to
+          gym.
+        </p>
+      </div>
+
+      <div class="video__wrap">
+        <video
+          src="assets/video/promotion-vid.mp4"
+          id="video"
+          controls
+          playsinline
+          preload="metadata"
+        >
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+    </div>
+
+    <div class="color" id="color">
+      <div class="section-head">
+        <h2>Pick your colorway</h2>
+        <p>
+          Four clean finishes that match your vibe — minimal, modern, and
+          timeless.
+        </p>
+      </div>
+
+      <div class="color__grid">
+        <div class="card">
+          <div class="swatch swatch--black" aria-hidden="true">
+            <img src="assets/black.png" alt="" />
+          </div>
+          <h3>Midnight Black</h3>
+          <p>Classic. Bold. Always clean.</p>
+        </div>
+
+        <div class="card">
+          <div class="swatch swatch--blue" aria-hidden="true">
+            <img src="assets/blue.png" alt="" />
+          </div>
+          <h3>Ocean Blue</h3>
+          <p>Fresh energy in a calm tone.</p>
+        </div>
+
+        <div class="card">
+          <div class="swatch swatch--green" aria-hidden="true">
+            <img src="assets/green.png" alt="" />
+          </div>
+          <h3>Sage Green</h3>
+          <p>Soft, modern, and grounded.</p>
+        </div>
+
+        <div class="card">
+          <div class="swatch swatch--beige" aria-hidden="true">
+            <img src="assets/cyan.png" alt="" />
+          </div>
+          <h3>Soft Beige</h3>
+          <p>Warm minimalism for everyday.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer__inner">
+        <p class="footer__brand">HydraLoop</p>
+        <p class="footer__text">
+          © 2026 HydraLoop. Designed for daily hydration.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
