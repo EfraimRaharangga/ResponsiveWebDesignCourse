@@ -1,0 +1,66 @@
+/* Optional but helps with predictable sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* requirement: 100% of viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.space {
+  width: 200px;
+  height: 200px;
+  position: relative; /* requirement */
+}
+
+/* Earth centered using top/left 50% + translate(-50%, -50%) */
+.earth {
+  position: absolute;
+  width: 100px; /* requirement */
+  height: 100px; /* requirement */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: blue;
+  border-radius: 50%;
+  box-shadow: 0 0 20px blue;
+}
+
+/* Orbit: 200x200 and bottom-right corner at center of .space,
+   then shift by -50% -50% using transform */
+.orbit {
+  position: absolute;
+  width: 200px; /* requirement */
+  height: 200px; /* requirement */
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* requirement: circular path */
+
+  animation: orbit 5s linear infinite; /* requirement */
+}
+
+/* Moon at the top of orbit, centered horizontally, then move left half its width */
+.moon {
+  position: absolute; /* requirement */
+  width: 30px; /* requirement */
+  height: 30px; /* requirement */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* requirement */
+  background: gray;
+  border-radius: 50%;
+  box-shadow: 0 0 20px gray;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}

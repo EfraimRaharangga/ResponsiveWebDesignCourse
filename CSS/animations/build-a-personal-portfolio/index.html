@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Portfolio</title>
+
+    <!-- Google Icons (Material Symbols) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav id="navbar" class="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#welcome-section" aria-label="Go to top">
+          <span class="nav__brandDot" aria-hidden="true"></span>
+          <span>_efraimr</span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a href="#welcome-section">About</a></li>
+          <li><a href="#project-section">Projects</a></li>
+          <li><a href="#profile">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="welcome-section" class="welcome">
+      <div class="welcome__content">
+        <p class="welcome__badge">Front-End Web Developer (in progress)</p>
+
+        <h1 class="welcome__title">
+          Hi, I’m <span class="accent">Efraim</span> — I build clean, responsive
+          websites with HTML, CSS, and JavaScript.
+        </h1>
+
+        <p class="welcome__subtitle">
+          I’m currently sharpening my fundamentals through the freeCodeCamp
+          Responsive Web Design curriculum, and documenting my learning by
+          shipping small projects consistently.
+        </p>
+
+        <div class="welcome__cta">
+          <a class="btn btn--primary" href="#project-section">
+            View Projects
+          </a>
+          <a class="btn btn--ghost" href="#profile"> Contact Me </a>
+        </div>
+
+        <p class="welcome__hint">
+          Tip: Want to collaborate or give feedback? Jump to
+          <a href="#profile">contact</a>.
+        </p>
+      </div>
+
+      <div class="welcome__card" aria-hidden="true">
+        <div class="codeCard">
+          <div class="codeCard__top">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="codeCard__title">portfolio.css</span>
+          </div>
+          <pre class="codeCard__body"><code>:root {
+  --bg: #0b0f17;
+  --panel: #121a2a;
+  --text: #e6edf7;
+  --accent: #7c3aed;
+}</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div id="project-section" class="projects">
+      <header class="sectionHeader">
+        <h2 class="sectionHeader__title">Projects</h2>
+        <p class="sectionHeader__subtitle">
+          A few things I’ve built while learning responsive layouts, forms,
+          tables, and modern CSS practices.
+        </p>
+      </header>
+
+      <div class="projects__grid">
+        <div class="project-tile">
+          <img
+            src="assets/landing-page.PNG"
+            alt="Preview: Responsive Landing Page"
+            loading="lazy"
+          />
+          <a
+            href="../../../certification-project/build-a-product-landing-page/index.html"
+            target="_blank"
+            rel="noreferrer"
+            >Responsive Landing Page</a
+          >
+        </div>
+
+        <div class="project-tile">
+          <img
+            src="assets/book-inventory.PNG"
+            alt="Preview: Book Inventory Table"
+            loading="lazy"
+          />
+          <a
+            href="../../../certification-project/build-a-book-inventory-app/index.html"
+            target="_blank"
+            rel="noreferrer"
+            >Book Inventory Table</a
+          >
+        </div>
+
+        <div class="project-tile">
+          <img
+            src="assets/card.PNG"
+            alt="Preview: Playing Card Website"
+            loading="lazy"
+          />
+          <a
+            href="../../../certification-project/build-a-page-of-playing-cards/index.html"
+            target="_blank"
+            rel="noreferrer"
+            >Playing Card Website</a
+          >
+        </div>
+
+        <div class="project-tile">
+          <img
+            src="assets/documentation-project.PNG"
+            alt="Preview: PHP Documentation Website"
+            loading="lazy"
+          />
+          <a
+            href="../../../certification-project/build-a-technical-documentation-page/index.html"
+            target="_blank"
+            rel="noreferrer"
+            >PHP Documentation Website</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="profile" class="contact">
+      <header class="sectionHeader">
+        <h2 class="sectionHeader__title">Contact</h2>
+        <p class="sectionHeader__subtitle">
+          Let’s connect! Feel free to reach out through any of these platforms.
+        </p>
+      </header>
+
+      <div class="contact__grid">
+        <a
+          class="contactCard"
+          href="https://www.instagram.com/_efraimr/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >photo_camera</span
+          >
+          <div>
+            <div class="contactCard__title">Instagram</div>
+            <div class="contactCard__meta">@_efraimr</div>
+          </div>
+          <span
+            class="material-symbols-outlined contactCard__arrow"
+            aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+
+        <a
+          class="contactCard"
+          href="https://www.linkedin.com/in/efraim-raharangga-6ba6501b4/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">work</span>
+          <div>
+            <div class="contactCard__title">LinkedIn</div>
+            <div class="contactCard__meta">Connect professionally</div>
+          </div>
+          <span
+            class="material-symbols-outlined contactCard__arrow"
+            aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+
+        <a
+          id="profile-link"
+          class="contactCard"
+          href="https://github.com/EfraimRaharangga"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >terminal</span
+          >
+          <div>
+            <div class="contactCard__title">GitHub</div>
+            <div class="contactCard__meta">See my repositories</div>
+          </div>
+          <span
+            class="material-symbols-outlined contactCard__arrow"
+            aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+
+        <a class="contactCard" href="mailto:efraimraharangga21@gmail.com">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          <div>
+            <div class="contactCard__title">Email</div>
+            <div class="contactCard__meta">efraimraharangga21@gmail.com</div>
+          </div>
+          <span
+            class="material-symbols-outlined contactCard__arrow"
+            aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+
+        <a
+          class="contactCard"
+          href="https://wa.me/6281234567890"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          <div>
+            <div class="contactCard__title">WhatsApp</div>
+            <div class="contactCard__meta">Quick message</div>
+          </div>
+          <span
+            class="material-symbols-outlined contactCard__arrow"
+            aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+      </div>
+
+      <footer class="footer">
+        <p>© <span>2026</span> Efraim • Built with HTML & CSS</p>
+      </footer>
+    </div>
+  </body>
+</html>
